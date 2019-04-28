@@ -1,0 +1,91 @@
+<!--
+RssReader
+
+About：
+
+初心者向けのチュートリアルになります。JavascriptとjQueryを勉強しながら、RSSフィードのリーダーを開発します。
+
+チュートリアルはこちら：https://github.com/paulbarre/RssReader/wiki
+
+ウエブページのサンプルはこちら：https://paulbarre.github.io/RssReader/
+
+Credits：
+
+このチュートリアルが下のライブラリーを利用します。
+
+- jQuery：https://jquery.com/
+- Font Awesome：http://fontawesome.io/
+- Yahoo Query Language (YQL)：https://developer.yahoo.com/yql/
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Rss Reader</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/feed.js"></script>
+    <script src="js/favorite.js"></script>
+    <script src="js/bookmark.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <button class="menu-btn"><i class="fa fa-bars fa-3x"></i></button>
+        </nav>
+
+        <h1>RSS Reader</h1>
+    </header>
+
+    <aside id="menu">
+        <header>
+            <nav>
+                <button class="menu-btn"><i class="fa fa-close fa-3x"></i></button>
+            </nav>
+
+            <h2>メニュー</h2>
+        </header>
+
+        <article>
+            <h3>気に入り</h3>
+
+            <ul id="favorites-list"></ul>
+
+            <form id="add-favorite-form">
+                <input name="add-favorite-url" type="text" placeholder="URL">
+                <input name="add-favorite-btn" type="submit" value="登録">
+            </form>
+        </article>
+
+        <article>
+            <h3>ブックマーク</h3>
+            
+            <ul id="bookmarks-list"></ul>
+        </article>
+    </aside>
+
+    <section id="page">
+        <div id="loading" class="hidden"><i class="fa fa-cog fa-spin fa-5x"></i></div>
+
+        <header>
+            <h2>一覧</h2>
+        </header>
+
+        <div id="feed-articles"></div>
+    </section>
+
+    <footer id="footer">
+        <input id="feed-filter" type="text" placeholder="検索する...">
+    </footer>
+</body>
+</html>

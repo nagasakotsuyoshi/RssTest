@@ -1,0 +1,66 @@
+#menu {
+    background-color: #5d80ff;
+    height: 100%;
+    opacity: 1;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: .5s;
+    white-space: nowrap;
+    color: white;
+}
+
+#menu.opened {
+    width: 40%;
+}
+
+.menu-btn {
+    height: 4rem;
+    width: 4rem;
+    background-color: inherit;
+    border: 0;
+    color: inherit;
+}
+
+#menu header {
+    position: relative;
+    height: 6rem;
+    border-bottom: 1px solid #fff;
+}
+
+#menu header h2,
+#menu header nav {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0, -50%);
+}
+
+#menu header h2 {
+    left: 1rem;
+}
+
+#menu header nav {
+    right: 0.5rem;
+}
+
+#menu article {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #e8e9ff;
+}
+
+#add-favorite-form {
+    width: 100%;
+}
